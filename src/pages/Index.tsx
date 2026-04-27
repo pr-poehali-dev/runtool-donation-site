@@ -61,7 +61,7 @@ const DONATE_ITEMS = [
   },
 ];
 
-const SERVER_IP = "play.craftworld.ru";
+const SERVER_IP = "mc.runtool.net";
 const ONLINE_COUNT = 47;
 const MAX_PLAYERS = 200;
 
@@ -107,7 +107,7 @@ export default function Index() {
             className="font-['Cormorant'] text-2xl font-semibold tracking-wide cursor-pointer"
             onClick={() => scrollTo("home")}
           >
-            CraftWorld
+            RunTool
           </span>
 
           <div className="hidden md:flex items-center gap-8">
@@ -171,7 +171,7 @@ export default function Index() {
             Добро пожаловать
             <br />
             <em className="not-italic" style={{ color: "hsl(25, 45%, 50%)" }}>
-              в CraftWorld
+              в RunTool
             </em>
           </h1>
 
@@ -429,7 +429,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="border-t border-border py-10 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-['Cormorant'] text-2xl font-semibold">CraftWorld</span>
+          <span className="font-['Cormorant'] text-2xl font-semibold">RunTool</span>
           <p className="text-muted-foreground text-sm font-['Golos_Text']">
             {SERVER_IP} · Java Edition 1.20
           </p>
