@@ -5,6 +5,7 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/5a15d1a1-6e3c-4330-9638-d7654
 
 const NAV_LINKS = [
   { id: "home", label: "Главная" },
+  { id: "donate", label: "Донаты" },
   { id: "status", label: "Статус" },
 ];
 
@@ -216,6 +217,39 @@ export default function Index() {
 
         <div className="relative flex justify-center pb-10 animate-fade-in delay-500 z-10">
           <Icon name="ChevronDown" size={18} className="text-muted-foreground animate-bounce" />
+        </div>
+      </section>
+
+      {/* DONATE */}
+      <section id="donate" className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-xs font-['Cinzel'] uppercase tracking-[0.3em] text-muted-foreground">
+              ✦ Поддержи сервер ✦
+            </span>
+            <h2 className="font-['Cinzel'] text-4xl md:text-5xl font-bold mt-4 tracking-wider">
+              Донат магазин
+            </h2>
+          </div>
+
+          <div className="max-w-sm mx-auto">
+            <div className="desert-card rounded-2xl p-8 text-center flex flex-col items-center gap-5">
+              <div className="text-5xl">🎁</div>
+              <div>
+                <h3 className="font-['Cinzel'] text-2xl font-bold tracking-wider mb-2">Донат кейс</h3>
+                <p className="text-muted-foreground font-['Nunito'] text-sm leading-relaxed">
+                  Случайный ценный предмет из особой коллекции.
+                  Каждый кейс гарантирует редкий дроп!
+                </p>
+              </div>
+              <div className="font-['Cinzel'] text-4xl font-bold" style={{ color: "hsl(18, 72%, 42%)" }}>
+                199 ₽
+              </div>
+              <button className="btn-desert w-full py-3.5 rounded-xl font-['Cinzel'] font-medium text-sm tracking-wider">
+                Купить
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
