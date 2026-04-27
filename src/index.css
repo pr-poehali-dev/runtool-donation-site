@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 35 45% 90%;
-    --foreground: 22 35% 15%;
+    --background: 33 55% 84%;
+    --foreground: 20 45% 12%;
 
-    --card: 34 50% 93%;
-    --card-foreground: 22 35% 15%;
+    --card: 32 60% 88%;
+    --card-foreground: 20 45% 12%;
 
-    --popover: 34 50% 93%;
-    --popover-foreground: 22 35% 15%;
+    --popover: 32 60% 88%;
+    --popover-foreground: 20 45% 12%;
 
-    --primary: 22 55% 28%;
-    --primary-foreground: 35 60% 95%;
+    --primary: 20 65% 22%;
+    --primary-foreground: 33 65% 95%;
 
-    --secondary: 33 40% 82%;
-    --secondary-foreground: 22 35% 15%;
+    --secondary: 30 50% 74%;
+    --secondary-foreground: 20 45% 12%;
 
-    --muted: 34 35% 84%;
-    --muted-foreground: 28 20% 42%;
+    --muted: 32 45% 78%;
+    --muted-foreground: 26 25% 36%;
 
-    --accent: 18 72% 48%;
+    --accent: 16 88% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 30% 75%;
-    --input: 30 30% 75%;
-    --ring: 18 72% 48%;
+    --border: 28 45% 62%;
+    --input: 28 45% 62%;
+    --ring: 16 88% 42%;
 
     --radius: 0.75rem;
   }
@@ -44,7 +44,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Nunito", sans-serif;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='sand'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23sand)' opacity='0.07'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='sand'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23sand)' opacity='0.1'/%3E%3C/svg%3E");
     overflow-x: hidden;
   }
 
@@ -100,13 +100,12 @@
     animation-delay: 0.5s;
   }
 
-  /* Песчаный ветер */
+  /* Песчаный ветер — крупнее и быстрее */
   .sand-particle {
     position: fixed;
     pointer-events: none;
-    z-index: 0;
+    z-index: 10;
     border-radius: 50%;
-    background: hsl(35, 60%, 70%);
     opacity: 0;
     animation: sandWind linear infinite;
   }
@@ -114,17 +113,17 @@
   @keyframes sandWind {
     0% {
       opacity: 0;
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0) rotate(0deg) scaleX(1);
     }
-    10% {
-      opacity: 0.6;
+    8% {
+      opacity: 0.85;
     }
-    90% {
-      opacity: 0.3;
+    85% {
+      opacity: 0.5;
     }
     100% {
       opacity: 0;
-      transform: translateX(120vw) translateY(-30px) rotate(360deg);
+      transform: translateX(115vw) translateY(-60px) rotate(720deg) scaleX(2);
     }
   }
 
@@ -135,7 +134,7 @@
     left: 0;
     right: 0;
     height: 80px;
-    background: hsl(35, 45%, 88%);
+    background: hsl(33, 55%, 84%);
     clip-path: ellipse(55% 100% at 50% 100%);
     opacity: 0.5;
   }
@@ -148,41 +147,41 @@
   .desert-card {
     background: linear-gradient(
       135deg,
-      hsl(34, 50%, 94%) 0%,
-      hsl(33, 45%, 89%) 100%
+      hsl(32, 58%, 88%) 0%,
+      hsl(30, 52%, 82%) 100%
     );
-    border: 1px solid hsl(30, 35%, 78%);
+    border: 1px solid hsl(28, 48%, 65%);
     box-shadow:
-      0 2px 12px hsla(22, 40%, 20%, 0.08),
-      inset 0 1px 0 hsla(0, 0%, 100%, 0.6);
+      0 2px 14px hsla(20, 50%, 18%, 0.12),
+      inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
   }
 
   .desert-card:hover {
     box-shadow:
-      0 8px 32px hsla(18, 72%, 48%, 0.15),
-      inset 0 1px 0 hsla(0, 0%, 100%, 0.6);
-    border-color: hsl(18, 72%, 65%);
+      0 10px 36px hsla(16, 88%, 42%, 0.22),
+      inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+    border-color: hsl(16, 88%, 58%);
   }
 
   /* Кнопка-пустыня */
   .btn-desert {
     background: linear-gradient(
       135deg,
-      hsl(18, 65%, 38%) 0%,
-      hsl(22, 70%, 30%) 100%
+      hsl(16, 80%, 36%) 0%,
+      hsl(20, 75%, 26%) 100%
     );
-    color: hsl(35, 60%, 95%);
-    box-shadow: 0 4px 16px hsla(18, 72%, 48%, 0.3);
+    color: hsl(33, 65%, 95%);
+    box-shadow: 0 4px 18px hsla(16, 88%, 42%, 0.4);
     transition: all 0.2s ease;
   }
 
   .btn-desert:hover {
     background: linear-gradient(
       135deg,
-      hsl(18, 65%, 44%) 0%,
-      hsl(22, 70%, 36%) 100%
+      hsl(16, 80%, 42%) 0%,
+      hsl(20, 75%, 32%) 100%
     );
-    box-shadow: 0 6px 24px hsla(18, 72%, 48%, 0.4);
+    box-shadow: 0 7px 28px hsla(16, 88%, 42%, 0.55);
     transform: translateY(-1px);
   }
 }

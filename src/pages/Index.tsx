@@ -19,7 +19,7 @@ const DONATE_ITEMS = [
   { id: 6, name: "Привилегия LEGEND", desc: "Все привилегии + эксклюзивные частицы и питомец", price: "599 ₽", badge: "Топ", emoji: "👑" },
 ];
 
-const SERVER_IP = "mc.runtool.net";
+const SERVER_IP = "mc.runtool.ru";
 const ONLINE_COUNT = 47;
 const MAX_PLAYERS = 200;
 
@@ -36,13 +36,13 @@ function SandParticles() {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const list: Particle[] = Array.from({ length: 22 }, (_, i) => ({
+    const list: Particle[] = Array.from({ length: 40 }, (_, i) => ({
       id: i,
       top: Math.random() * 100,
-      size: Math.random() * 3 + 1,
-      duration: Math.random() * 12 + 8,
-      delay: Math.random() * 10,
-      opacity: Math.random() * 0.5 + 0.2,
+      size: Math.random() * 7 + 2,
+      duration: Math.random() * 6 + 3,
+      delay: Math.random() * 8,
+      opacity: Math.random() * 0.65 + 0.3,
     }));
     setParticles(list);
   }, []);
@@ -55,11 +55,11 @@ function SandParticles() {
           className="sand-particle absolute"
           style={{
             top: `${p.top}%`,
-            left: "-10px",
+            left: "-20px",
             width: `${p.size}px`,
-            height: `${p.size * 0.4}px`,
-            borderRadius: "50%",
-            background: `hsla(35, 65%, 68%, ${p.opacity})`,
+            height: `${p.size * 0.35}px`,
+            borderRadius: "40%",
+            background: `hsla(28, 72%, 55%, ${p.opacity})`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
           }}
@@ -352,7 +352,7 @@ export default function Index() {
 
             <div className="desert-card rounded-2xl p-6 text-center">
               <Icon name="Cpu" size={20} className="mx-auto mb-4 text-muted-foreground" />
-              <p className="font-['Cinzel'] text-5xl font-bold">1.20</p>
+              <p className="font-['Cinzel'] text-5xl font-bold">1.21</p>
               <p className="text-muted-foreground text-xs font-['Nunito'] mt-3 tracking-wide">Версия Minecraft</p>
             </div>
           </div>
@@ -360,7 +360,7 @@ export default function Index() {
           <div className="desert-card rounded-2xl divide-y divide-border overflow-hidden">
             {[
               { label: "IP адрес", value: SERVER_IP, icon: "Globe" },
-              { label: "Версия", value: "Java 1.20.x", icon: "Code" },
+              { label: "Версия", value: "Java 1.21.8", icon: "Code" },
               { label: "Режим", value: "Survival + Creative", icon: "Gamepad2" },
               { label: "Аптайм этой недели", value: "99.8%", icon: "Activity" },
             ].map((row) => (
@@ -453,7 +453,7 @@ export default function Index() {
             ✦ RunTool ✦
           </span>
           <p className="text-muted-foreground text-sm font-['Nunito']">
-            {SERVER_IP} · Java Edition 1.20
+            {SERVER_IP} · Java Edition 1.21.8
           </p>
           <p className="text-muted-foreground text-xs font-['Nunito']">© 2024 RunTool</p>
         </div>
