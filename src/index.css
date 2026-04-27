@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 36 28% 94%;
-    --foreground: 30 20% 18%;
+    --background: 35 45% 90%;
+    --foreground: 22 35% 15%;
 
-    --card: 38 30% 97%;
-    --card-foreground: 30 20% 18%;
+    --card: 34 50% 93%;
+    --card-foreground: 22 35% 15%;
 
-    --popover: 38 30% 97%;
-    --popover-foreground: 30 20% 18%;
+    --popover: 34 50% 93%;
+    --popover-foreground: 22 35% 15%;
 
-    --primary: 30 20% 18%;
-    --primary-foreground: 36 28% 94%;
+    --primary: 22 55% 28%;
+    --primary-foreground: 35 60% 95%;
 
-    --secondary: 38 25% 88%;
-    --secondary-foreground: 30 20% 18%;
+    --secondary: 33 40% 82%;
+    --secondary-foreground: 22 35% 15%;
 
-    --muted: 38 20% 88%;
-    --muted-foreground: 30 12% 45%;
+    --muted: 34 35% 84%;
+    --muted-foreground: 28 20% 42%;
 
-    --accent: 25 45% 55%;
+    --accent: 18 72% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 82%;
-    --input: 35 20% 82%;
-    --ring: 30 20% 18%;
+    --border: 30 30% 75%;
+    --input: 30 30% 75%;
+    --ring: 18 72% 48%;
 
     --radius: 0.75rem;
   }
@@ -44,6 +44,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Golos Text", sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='sand'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23sand)' opacity='0.07'/%3E%3C/svg%3E");
   }
 
   h1,

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/5a15d1a1-6e3c-4330-9638-d76545e58ec5/files/322e14ee-87c5-4e61-9a98-86c19d76e296.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/5a15d1a1-6e3c-4330-9638-d76545e58ec5/files/600b8da9-484c-4b6c-bc4b-34a299fe0d64.jpg";
 
 const NAV_LINKS = [
   { id: "home", label: "Главная" },
@@ -170,7 +170,7 @@ export default function Index() {
           <h1 className="font-['Cormorant'] text-6xl md:text-8xl font-semibold leading-tight mb-6 animate-fade-in-up delay-100">
             Добро пожаловать
             <br />
-            <em className="not-italic" style={{ color: "hsl(25, 45%, 50%)" }}>
+            <em className="not-italic" style={{ color: "hsl(18, 72%, 48%)" }}>
               в RunTool
             </em>
           </h1>
